@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thuê trọ</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src=" https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <link rel="stylesheet" href="index2.css">
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="images/LOGO_Tro.png" class="logo"
+              style=" background-size: 50%;width: 150px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Đăng Nhập</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Đăng ký</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#" id="navbarDropdown">
+                  Đăng Tin Mới
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header2">
+      <a href="#">Trang Chủ</a>
+      <a href="#">Cho Thuê Phòng Trọ</a>
+      <a href="#">Nhà Cho Thuê</a>
+      <a href="#">Căn Hộ Cho Thuê</a>
+      <a href="#">Tìm Người Ở Ghép</a>
+      <a href="#">Cho Thuê Mặt Bằng</a>
+      <a href="#">Quản Lý Tin</a>
+      <a href="#">Thông Báo</a>
+    </div>
+  </header>
+  <!--  anh nen trang chu -->
+
+  <!-- --------------------------------- -->
+  <div class="container-fluid select_option">
+    <ul class="list_select">
+      <li>
+        <label for="option1">Loại Tin</label><br>
+        <select id="option1">
+          <option value="phong tro, nha tro" selected>Phòng trọ, nhà trọ</option>
+        </select>
+      </li>
+      <li>
+        <label for="option2">Tỉnh Thành</label><br>
+        <select id="option2">
+          <option value="TT.Hue">Thừa Thiên Huế</option>
+          <option value="DaNang">Đà Nẵng</option>
+          <option value="Tat ca" selected>Tất cả</option>
+        </select>
+      </li>
+      <li>
+        <label for="option3">Quận Huyện</label><br>
+        <select id="option3">
+          <option value="Tat ca" selected>Tất cả</option>
+        </select>
+      </li>
+      <li>
+        <label for="option4">Đường Phố</label><br>
+        <select id="option4">
+          <option value="Tat ca" selected>Tất cả</option>
+        </select>
+      </li>
+      <li>
+        <label for="option5">Khoảng Giá</label><br>
+        <select id="option5">
+          <option value="Chon muc gia" selected>Chọn mức giá</option>
+        </select>
+      </li>
+      <li>
+        <label for="option6">Diện Tích</label><br>
+        <select id="option6">
+          <option value="Chon dien tich" selected>Chọn diện tích</option>
+        </select>
+      </li>
+      <li>
+        <button id="loc_tin">Lọc Tin</button>
+      </li>
+    </ul>
+  </div>
+  <div class="container-fluid  text-dark">
+    <h1>Khu Vực nổi bật</h1>
+  </div>
+  <div class="container row " style="margin:auto;width: 85%;padding: 10px;">
+    <div class="one-third col-md-4"> <a href="#" class="img-caption">
+        <figure> <img src="images/saigon.png" alt="" />
+          <figcaption>
+            <h3>Phòng Trọ Hồ Chí Minh</h3> <span>For what reason would it be advisable for me to think about business
+              content?</span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+    <div class="one-third col-md-4"> <a href="#" class="img-caption">
+        <figure> <img src="images/danang.png" alt="" />
+          <figcaption>
+            <h3>Phòng Trọ Đà Nẵng</h3> <span>For what reason would it be advisable for me to think about business
+              content?</span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+    <div class="one-third col-md-4"> <a href="#" class="img-caption">
+        <figure> <img src="images/hanoi.png" alt="" />
+          <figcaption>
+            <h3>Phòng Trọ Hà Nội</h3> <span>For what reason would it be advisable for me to think about business
+              content?</span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <!-- slide ------------------------------------------->
+
+
+  <div class="container">
+    <h1><b>Tin Nổi Bật</b></h1>
+  </div>
+  <div class="container slide ">
+    <div class="items">
+      <div class="card" style="width:250px">
+
+        <img class="card-img-top" src="https://thuenhatro360.com/u/i/YkGgFDNJ.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Cần Cho thuê nhà giá rẻ tại đại học văn lang</h5>
+          <figcaption class="figure-caption text-left">40m²-2PN</figcaption>
+          <p class="money text-left"><b>6.5 triệu\tháng</b></p>
+          <div class="row footer___2QdZm">
+            <div><img class="image___3OzO2 " width="15"
+                src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" alt="Môigiới"></div>
+            <!-- <div class="deviderWrapper___3umBa"></div> -->
+            <div class="adItemPostedTime___2i72W">
+              <span class="text___19FS4">22 phút trước</span>
+            </div>
+            <div class="deviderWrapper___3umBa">
+            </div><span class="adItemPostedTime___2i72W location___2mJlP">
+              <span class="text___19FS4">Thừa Thiên Huế</span></span>
+          </div>
+
+        </div>
+      </div>
+      <div class="card" style="width:250px">
+        <img class="card-img-top"
+          src="https://static123.com/phongtro123/uploads/images/thumbs/450x300/fit/2021/03/10/z2372619782952-d6e9ea00722fe599c19780e60d4e5117_1615390683.jpg"
+          alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Phòng trọ Quận Bình Tân 20m²,Có Máy Lạnh,Thang Máy</h5>
+          <figcaption class="figure-caption text-left">20 m2</figcaption>
+          <p class="money text-left"><b>2 triệu/tháng</b></p>
+          <div class="row footer___2QdZm">
+            <div><img class="image___3OzO2 " width="15"
+                src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" alt="Môigiới"></div>
+            <!-- <div class="deviderWrapper___3umBa"></div> -->
+            <div class="adItemPostedTime___2i72W">
+              <span class="text___19FS4">1 giờ trước</span>
+            </div>
+            <div class="deviderWrapper___3umBa">
+            </div><span class="adItemPostedTime___2i72W location___2mJlP">
+              <span class="text___19FS4">Hồ Chí Minh</span></span>
+          </div>
+
+        </div>
+      </div>
+      <div class="card" style="width:250px">
+        <img class="card-img-top" src="https://bandon.vn/uploads/tim-phong-tro-1-nguoi-o-1.jpg" alt="Card image"
+          style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">phòng giá 1.5 triệu t8, cạnh BV Gia ĐỊnh,Chínhchủ</h5>
+          <figcaption class="figure-caption text-left">20m²</figcaption>
+          <p class="money text-left"><b>1,5 triệu/tháng</b></p>
+          <div class="row footer___2QdZm">
+            <div><img class="image___3OzO2 " width="15"
+                src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" alt="Môigiới"></div>
+            <!-- <div class="deviderWrapper___3umBa"></div> -->
+            <div class="adItemPostedTime___2i72W">
+              <span class="text___19FS4">22 phút trước</span>
+            </div>
+            <div class="deviderWrapper___3umBa">
+            </div><span class="adItemPostedTime___2i72W location___2mJlP">
+              <span class="text___19FS4">Hồ Chí Minh</span></span>
+          </div>
+
+        </div>
+      </div>
+      <div class="card" style="width:250px">
+        <img class="card-img-top" src="https://thietkenhadepmoi.com/wp-content/uploads/2020/11/phong-tro-dep-2023.jpg"
+          alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Cần Cho thuê nhà giá rẻ tại đại học văn lang</h5>
+          <figcaption class="figure-caption text-left">40m²-2PN</figcaption>
+          <p class="money text-left"><b>6.5 triệu\tháng</b></p>
+          <div class="row footer___2QdZm">
+            <div><img class="image___3OzO2 " width="15"
+                src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" alt="Môigiới"></div>
+            <!-- <div class="deviderWrapper___3umBa"></div> -->
+            <div class="adItemPostedTime___2i72W">
+              <span class="text___19FS4">22 phút trước</span>
+            </div>
+            <div class="deviderWrapper___3umBa">
+            </div><span class="adItemPostedTime___2i72W location___2mJlP">
+              <span class="text___19FS4">Thừa Thiên Huế</span></span>
+          </div>
+
+        </div>
+      </div>
+      <div class="card" style="width:250px">
+        <img class="card-img-top" src="https://thuenhatro360.com/u/i/YkGgFDNJ.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Phòng trọ Trường Chinh Tân Bình gác cao 1m8 25m2</h5>
+          <figcaption class="figure-caption text-left">25m²</figcaption>
+          <p class="money text-left"><b>2.5 triệu\tháng</b></p>
+          <div class="row footer___2QdZm">
+            <div><img class="image___3OzO2 " width="15"
+                src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" alt="Môigiới"></div>
+            <!-- <div class="deviderWrapper___3umBa"></div> -->
+            <div class="adItemPostedTime___2i72W">
+              <span class="text___19FS4">22 phút trước</span>
+            </div>
+            <div class="deviderWrapper___3umBa">
+            </div><span class="adItemPostedTime___2i72W location___2mJlP">
+              <span class="text___19FS4">Hồ Chí Minh</span></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------- -->
+  <div id="title1">
+    <h2>Danh sách tin đăng</h2>
+  </div>
+  <div class="main">
+    <div class="left">
+      <div class="left_list">
+        <p id="text1">Sắp xếp</p>
+        <ul>
+          <li><a href="#">Mặc định</a></li>
+          <li><a href="#">Mới nhất</a></li>
+          <li><a href="#">Có video</a></li>
+        </ul>
+      </div>
+      <div class="left_list1">
+        <ul>
+          <div role="button" tabindex="0">
+            <li>
+              <a href href="#" class="adItem">
+                <img width="100" height="100" src="img2.jpg">
+                <div>
+                  <h3>PHÒNG TRỌ ĐƯỜNG BÌNH GIÃ, TÂN BÌNH 25m2 CÓ GÁC </h3>
+                  <p>25 m&#178;</p>
+                  <p><b>3 triệu/tháng</b></p>
+                </div>
+              </a>
+            </li>
+          </div>
+          <div role="button" tabindex="0">
+            <li>
+              <a href href="#" class="adItem">
+                <img width="100" height="100" src="img2.jpg">
+                <div>
+                  <h3>PHÒNG TRỌ ĐƯỜNG BÌNH GIÃ, TÂN BÌNH 25m2 CÓ GÁC </h3>
+                  <p>25 m&#178;</p>
+                  <p><b>3 triệu/tháng</b></p>
+                </div>
+              </a>
+            </li>
+          </div>
+          <div role="button" tabindex="0">
+            <li>
+              <a href href="#" class="adItem">
+                <img width="100" height="100" src="img2.jpg">
+                <div>
+                  <h3>PHÒNG TRỌ ĐƯỜNG BÌNH GIÃ, TÂN BÌNH 25m2 CÓ GÁC </h3>
+                  <p>25 m&#178;</p>
+                  <p><b>3 triệu/tháng</b></p>
+                </div>
+              </a>
+            </li>
+          </div>
+          <div role="button" tabindex="0">
+            <li>
+              <a href href="#" class="adItem">
+                <img width="100" height="100" src="img2.jpg">
+                <div>
+                  <h3>PHÒNG TRỌ ĐƯỜNG BÌNH GIÃ, TÂN BÌNH 25m2 CÓ GÁC </h3>
+                  <p>25 m&#178;</p>
+                  <p><b>3 triệu/tháng</b></p>
+                </div>
+              </a>
+            </li>
+          </div>
+          <div role="button" tabindex="0">
+            <li>
+              <a href href="#" class="adItem">
+                <img width="100" height="100" src="img2.jpg">
+                <div>
+                  <h3>PHÒNG TRỌ ĐƯỜNG BÌNH GIÃ, TÂN BÌNH 25m2 CÓ GÁC </h3>
+                  <p>25 m&#178;</p>
+                  <p><b>3 triệu/tháng</b></p>
+                </div>
+              </a>
+            </li>
+          </div>
+          <div role="button" tabindex="0">
+            <li>
+              <a href href="#" class="adItem">
+                <img width="100" height="100" src="img2.jpg">
+                <div>
+                  <h3>PHÒNG TRỌ ĐƯỜNG BÌNH GIÃ, TÂN BÌNH 25m2 CÓ GÁC </h3>
+                  <p>25 m&#178;</p>
+                  <p><b>3 triệu/tháng</b></p>
+                </div>
+              </a>
+            </li>
+          </div>
+          <div role="button" tabindex="0">
+            <li>
+              <a href href="#" class="adItem">
+                <img width="100" height="100" src="img2.jpg">
+                <div>
+                  <h3>PHÒNG TRỌ ĐƯỜNG BÌNH GIÃ, TÂN BÌNH 25m2 CÓ GÁC </h3>
+                  <p>25 m&#178;</p>
+                  <p><b>3 triệu/tháng</b></p>
+                </div>
+              </a>
+            </li>
+          </div>
+          <div role="button" tabindex="0">
+            <li>
+              <a href href="#" class="adItem">
+                <img width="100" height="100" src="img2.jpg">
+                <div>
+                  <h3>PHÒNG TRỌ ĐƯỜNG BÌNH GIÃ, TÂN BÌNH 25m2 CÓ GÁC </h3>
+                  <p>25 m&#178;</p>
+                  <p><b>3 triệu/tháng</b></p>
+                </div>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="top_list">
+        <h2>Danh mục cho thuê</h2>
+        <ul>
+          <li><a href="#">Cho thuê phòng trọ</a></li>
+          <li><a href="#">Cho thuê nhà nguyên căn</a></li>
+          <li><a href="#">Cho thuê căn hộ</a></li>
+          <li><a href="#">>Cho thuê căn hộ mini</a></li>
+          <li><a href="#">>Cho thuê căn hộ dịch vụ</a></li>
+          <li><a href="#">Cho thuê mặt bằng</a></li>
+          <li><a href="#">Tìm người ở ghép</a></li>
+        </ul>
+      </div>
+      <div class="bottom_list">
+        <h2>Tin mới đăng</h2>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="footer-left_title">
+        <h1>TimPhong247</h1>
+      </div>
+      <div class="footer-left_main">
+        <div>
+          <h3>About</h3>
+          <p>Đứng đầu các từ khóa liên quan đến phòng trọ<br>
+            cho thuê, nhà cho thuê, tìm người ở ghép<br>
+            70.000+ tin bài trên hệ thống, và tiếp tục tăng<br>
+            300.000+ khách truy cập và hơn 2 triệu lượt<br>
+            xem mỗi tháng</p>
+        </div>
+        <div class="pttt">
+          <h3>Phương thức thanh toán</h3>
+          <a href="#"><img width="145px" height="80px" src="Image 19.png"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-right_head__1">
+        <input type="search" id="search_footer" value="" placeholder="  Your email">
+        <button id="button_next" type="button">Next</button>
+      </div>
+      <div class="footer-main__right">
+        <div class="footer-right_main_1">
+          <h3>Liên hệ với chúng tôi</h3>
+          <ul class="footer-right_img__list">
+            <li>
+              <a href="#"><img src="facebook.png" alt=""></a>
+            </li>
+            <li id="twitter-img">
+              <a href="#"><img src="twitter.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right_main_2">
+          <h3>Terms of Use</h3>
+          <p><a href="#">© Copyright 2019. Laaqiq All Right Reserved</a></p><br>
+          <p><a href="#"> phongtro247@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

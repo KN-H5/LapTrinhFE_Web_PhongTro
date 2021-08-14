@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Thuê trọ</title>
+  <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid"> 
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/LOGO_Tro.png" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Đăng Nhập</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Đăng ký</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="#" id="navbarDropdown" >
+                Đăng Tin Mới
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="header2">
+    <div class="container-fluid mr-auto">
+      <a href="#">Trang Chủ</a>
+      <a href="#">Cho Thuê Phòng Trọ</a>
+      <a href="#">Nhà Cho Thuê</a>
+      <a href="#">Căn Hộ Cho Thuê</a>
+      <a href="#">Tìm Người Ở Ghép</a>
+      <a href="#">Cho Thuê Mặt Bằng</a>
+      <a href="#">Quản Lý Tin</a>
+      <a href="#">Thông Báo</a>
+
+    </div>
+  </div>
+  <div class="container p-3 my-3 bg-dark text-white">
+    <div class="container">
+      <img class="img-fluid" src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.15752-9/212292677_403077437692519_4455143925104076432_n.png?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_ohc=Xpm-40hrBAAAX_KVMMY&_nc_ht=scontent.fsgn2-3.fna&oh=5805ab518871dade5db8ba6f480a2bda&oe=610310E5" class="mx-auto d-block" style="width:100%" class="rounded" alt="Cinque Terre" width="400" height="400"> 
+    </div>
+  </div>
+</header>
+<div class="select_option">
+  <ul class="list_select">
+    <li>
+      <label for="option1">Loại Tin</label><br>
+      <select id="option1">
+        <option value="phong tro, nha tro" selected>Phòng trọ, nhà trọ</option>
+      </select>
+    </li>
+    <li>
+      <label for="option2">Tỉnh Thành</label><br>
+      <select id="option2">
+        <option value="TT.Hue">Thừa Thiên Huế</option>
+        <option value="DaNang">Đà Nẵng</option>
+        <option value="Tat ca" selected>Tất cả</option>
+      </select>
+    </li>
+    <li>
+      <label for="option3">Quận Huyện</label><br>
+      <select id="option3">
+        <option value="Tat ca" selected>Tất cả</option>
+      </select>
+    </li>
+    <li>
+      <label for="option4">Đường Phố</label><br>
+      <select id="option4">
+        <option value="Tat ca" selected>Tất cả</option>
+      </select>
+    </li>
+    <li>
+      <label for="option5">Khoảng Giá</label><br>
+      <select id="option5">
+        <option value="Chon muc gia" selected>Chọn mức giá</option>
+      </select>
+    </li>
+    <li>
+      <label for="option6">Diện Tích</label><br>
+      <select id="option6">
+        <option value="Chon dien tich" selected>Chọn diện tích</option>
+      </select>
+    </li>
+    <li>
+      <button id="loc_tin">Lọc Tin</button>
+    </li>
+  </ul>
+</div>
+<div class="Slider">
+  <h><b>Tin Nổi Bật</b></h>
+</div>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row ">
+          <div class="card" style="width: 15rem;">
+            <img src="https://static123.com/phongtro123/uploads/images/thumbs/450x300/fit/2021/07/28/46a6bd6b-bc78-4eaa-8fe7-2e941ef790b7_1627476629.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+
+          <div class="card" style="width: 15rem;">
+            <img src="https://static123.com/phongtro123/uploads/images/thumbs/450x300/fit/2021/07/28/46a6bd6b-bc78-4eaa-8fe7-2e941ef790b7_1627476629.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+
+          </div>
+
+          <div class="card" style="width: 15rem;">
+            <img src="https://static123.com/phongtro123/uploads/images/thumbs/450x300/fit/2021/07/28/46a6bd6b-bc78-4eaa-8fe7-2e941ef790b7_1627476629.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="https://static123.com/phongtro123/uploads/images/thumbs/450x300/fit/2021/07/28/46a6bd6b-bc78-4eaa-8fe7-2e941ef790b7_1627476629.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      ---------------
+      <div class="carousel-item">
+       <div class="container">
+
+       </div>
+     </div>
+     ----------------
+
+     <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="card" style="width: 18rem;">
+            <img src="https://static123.com/phongtro123/uploads/images/thumbs/450x300/fit/2021/07/28/46a6bd6b-bc78-4eaa-8fe7-2e941ef790b7_1627476629.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    ----------------
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Adobe Clean", serif;
+}
+body{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header1{
+    height: 60px;
+    background: white;
+    /* padding: ; */
+}
+.header1 img{
+    display:block;
+    max-width: 230px;
+    max-height: 40px;
+    float: left;
+    padding-left: 30px;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+}
+.header1 .search{
+    float: right;
+    /*margin_left:20px;*/
+    line-height: 60px;
+    width: 60%;
+    /*padding: 10px;*/
+}
+.header1 .search a{
+    color: #555555;
+    text-decoration: none;
+    margin:10px;
+}
+.header1 .search a:hover{
+    color: black;
+}
+.header2{
+    background: #1473E6;
+    height: 40px;
+    clear: both;
+}
+.header2 a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    line-height: 40px;
+}
+.header2 a:hover{
+    color: black;
+}
+#search{
+    width: 230px;
+    height: 28px;
+    border-radius: 0.25rem ;
+    border: 1px solid;
+}
+#tim_kiem{
+    width: 70px;
+    height: 28px;
+    border-radius: 0.25rem ;
+    border: 1px solid;
+}
+.select_option{
+    border-radius: 5px;
+    background: #707070;
+    color: white;
+    width: 1180px;
+    margin-top: 5px;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+.select_option select{
+    width:125px;
+    height: 25px;
+}
+.select_option button{
+    background: #FFA80F;
+    border-radius: 6px;
+    width: 65px;
+    height: 25px;
+    color: white;
+}
+.select_option .list_select li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+.nhan h b{
+    font-size: 23px;
+    margin-left: 23px;
+}
+.Slider{
+    margin-top: 5px;
+    background:#E7E8EA;
+    margin-left: 25px;
+    width: 1160px;
+    margin-right: 25px;
+    height: 240px;
+}
+#title1{
+    margin-top:4.125rem;
+    background-color:#D1ECF1;
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 0.125rem;
+}
+#title1 h2{
+    line-height: 2.3rem;
+    margin-left: 6.875rem;
+    font-size: 1.1875rem;
+}
+.main{
+    margin-top: 0.75rem;
+    height: 1300px;
+}
+.left_list ul{
+    list-style: none;
+    display: flex;
+}
+.left_list ul li a{
+    background-color: white; /* màu của Quản trị mạng ^^ */
+    border: none;
+    color: black;
+    border: 2px solid #BFE3C8;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.left_list{
+    display: inline-block;
+}

@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuê trọ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="index4.css">
+    <!-- <link rel="stylesheet" href="index3.css"> -->
+    <!-- <script src="index2.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="images/LOGO_Tro.png" class="logo"
+                            style=" background-size: 70%; width: 235px; height: 51px;"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Đăng Nhập</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Đăng ký</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="#" id="navbarDropdown">
+                                    Đăng Tin Mới
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header2">
+            <a href="#">Trang Chủ</a>
+            <a href="#">Cho Thuê Phòng Trọ</a>
+            <a href="#">Nhà Cho Thuê</a>
+            <a href="#">Căn Hộ Cho Thuê</a>
+            <a href="#">Tìm Người Ở Ghép</a>
+            <a href="#">Cho Thuê Mặt Bằng</a>
+            <a href="#">Quản Lý Tin</a>
+            <a href="#">Thông Báo</a>
+        </div>
+    </header>
+    <div class="select_option">
+        <ul class="list_select">
+            <li>
+                <label for="option1">Loại Tin</label><br>
+                <select id="option1">
+                    <option value="phong tro, nha tro" selected>Phòng trọ, nhà trọ</option>
+                </select>
+            </li>
+            <li>
+                <label for="option2">Tỉnh Thành</label><br>
+                <select id="option2">
+                    <option value="TT.Hue">Thừa Thiên Huế</option>
+                    <option value="DaNang">Đà Nẵng</option>
+                    <option value="Tat ca" selected>Tất cả</option>
+                </select>
+            </li>
+            <li>
+                <label for="option3">Quận Huyện</label><br>
+                <select id="option3">
+                    <option value="Tat ca" selected>Tất cả</option>
+                </select>
+            </li>
+            <li>
+                <label for="option4">Đường Phố</label><br>
+                <select id="option4">
+                    <option value="Tat ca" selected>Tất cả</option>
+                </select>
+            </li>
+            <li>
+                <label for="option5">Khoảng Giá</label><br>
+                <select id="option5">
+                    <option value="Chon muc gia" selected>Chọn mức giá</option>
+                </select>
+            </li>
+            <li>
+                <label for="option6">Diện Tích</label><br>
+                <select id="option6">
+                    <option value="Chon dien tich" selected>Chọn diện tích</option>
+                </select>
+            </li>
+            <li>
+                <button id="loc_tin">Lọc Tin</button>
+            </li>
+        </ul>
+    </div>
+    <div class="details-top">
+        <div class="details-top-left">
+            <div class="container details-top-left">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+                            <!-- slides -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"> <img
+                                        src="http://hanoimoi.com.vn/Uploads/anhthu/2017/11/10/ps.jpg" alt="Hills">
+                                </div>
+                                <div class="carousel-item"> <img
+                                        src="https://tieudungxanh24h.com/cdn/images/cach-trang-tri-phong-tro-nho-1.jpg"
+                                        alt="Hills"> </div>
+                                <div class="carousel-item"> <img
+                                        src="https://thietkenhadepmoi.com/wp-content/uploads/2020/10/thiet-ke-nha-tro-dep-2021.jpg"
+                                        alt="Hills"> </div>
+                                <div class="carousel-item"> <img
+                                        src="https://wedo.vn/wp-content/uploads/2019/11/thiet-ke-phong-tro-dep-6.jpg"
+                                        alt="Hills"> </div>
+                            </div> <!-- Left right --> <a class="carousel-control-prev" href="#custCarousel"
+                                data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a
+                                class="carousel-control-next" href="#custCarousel" data-slide="next"> <span
+                                    class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
+                            <ol class="carousel-indicators list-inline">
+                                <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected"
+                                        data-slide-to="0" data-target="#custCarousel"> <img
+                                            src="http://hanoimoi.com.vn/Uploads/anhthu/2017/11/10/ps.jpg"
+                                            class="img-fluid"> </a> </li>
+                                <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1"
+                                        data-target="#custCarousel"> <img
+                                            src="https://tieudungxanh24h.com/cdn/images/cach-trang-tri-phong-tro-nho-1.jpg"
+                                            class="img-fluid"> </a> </li>
+                                <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2"
+                                        data-target="#custCarousel"> <img
+                                            src="https://thietkenhadepmoi.com/wp-content/uploads/2020/10/thiet-ke-nha-tro-dep-2021.jpg"
+                                            class="img-fluid"> </a> </li>
+                                <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3"
+                                        data-target="#custCarousel"> <img
+                                            src="https://wedo.vn/wp-content/uploads/2019/11/thiet-ke-phong-tro-dep-6.jpg"
+                                            class="img-fluid"> </a> </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="details-top-right">
+            <div class="details-top-right_main">
+                <div class=details-top-right_user>
+                    <img width="35px" height="35px" src="images/avartar.png">
+                    <h3 style="font-size: 25px;">Kim NGuyễn</h3>
+                </div>
+                <div class="details-top-right_list">
+                    <ul class="details-link">
+                        <a href="#" id="details-link_1">
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <p>0763861234</p>
+                            </li>
+                        </a>
+                        <a href="#" id="details-link_2">
+                            <li>
+                                <img src="images/zalo.png" alt="">
+                                <p>Nhắn Zalo</p>
+                            </li>
+                        </a>
+                        <a href="#" id="details-link_3">
+                            <li>
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                <p>Yêu thích</p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <img id="img28" width="165px" height="175px" src="images/thue.png">
+        </div>
+    </div>
+    <div class="details-bottom">
+        <div class="details-bottom-left">
+            <div class="details">
+                <div class="details-title">
+                    <h1>Phòng Trọ đường Văn Cao - Tpho Huế</h1>
+                    <p style="color: #10C5FE;"><i style=" color: black;" class="far fa-map"></i> Đường Văn Cao, Phường
+                        Xuân Phú, Thành phố Huế, Thừa Thiên Huế</p>
+                    <p><i class="fas fa-globe-asia"></i> 750.000 đ/tháng- 15 m2</p>
+                </div>
+                <div class="details-main">
+                    <p style="color: red;">Số điện thoại: 0969151547</p>
+                    <ul style="list-style: none;">
+                        <li>+++ MIỄN PHÍ: CÁC DỊCH VỤ: THANG MÁY, MÁY GIẶT, NƯỚC NÓNG NĂNG LƯỢNG MẶT TRỜI, PHÍ ĐỂ XE
+                            KHÁCH TỚI CHƠI, AN NINH QUỐC PHÒNG</li>
+                        <li>****TIỆN NGHI:</li>
+                        <li>- Phòng diện tích từ 20-25m2 trên lầu THOÁNG MÁT</li>
+                        <li>- Toilet RIÊNG trong phòng đảm bảo cho bạn sự RIÊNG TƯ</li>
+                        <li>- Có máy lạnh, bao mát ngày hè</li>
+                        <li>- BAN CÔNG, CỬA SỔ, hành lang rộng rãi THOÁNG MÁT</li>
+                        <li>- SÂN THƯỢNG phơi đồ có mái che khỏi sợ ướt đồ khi trời mưa.</li>
+                        <li>- Internet cáp quang Viettel, WIFI tốc độ CAO cho bạn luôn LUÔN KẾT NỐI với thế giới bên
+                            ngoài qua công nghệ số.</li>
+                        <li>- THANG MÁY MIỄN PHÍ lên lầu khỏi lo mỏi chân nữa nhé.</li>
+                        <li>- Có Giường,nệm, tủ quần áo, bàn nghế TIỆN NGHI nhé</li>
+                        <li>- Có chỗ để xe ngay trong nhà Với hệ thống CAMERA quan sát, BẢO VỆ trông coi 24/24 để bạn và
+                            tài sản luôn AN TOÀN.</li>
+                    </ul>
+                </div>
+                <div class="detail-icon">
+                    <ul style="list-style: none;display: flex;margin-left: 122.9px;">
+                        <li><i class="far fa-question-circle"> Cho thuê</i></li>
+                        <li id=icon-2><i class="fas fa-th-large"></i> Diện tích</li>
+                    </ul>
+                </div>
+                <div class="details-table">
+                    <p><b>Đặc điểm tin đăng</b></p>
+                    <table class="table" border="1">
+                        <tr>
+                            <td>Mã in</td>
+                            <td>#294167</td>
+                        </tr>
+                        <tr>
+                            <td>Khu vực</td>
+                            <td>Cho thuê phòng trọ Thừa Thiên Huế</td>
+                        </tr>
+                        <tr>
+                            <td>Loại tin rao</td>
+                            <td>Phòng trọ, nhà trọ</td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td>Đối tượng thuê</td>
+                            <td>Tất cả</td>
+                        </tr>
+                        <tr>
+                            <td>Giờ in</td>
+                            <td>Tin thường</td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td>Ngày đăng</td>
+                            <td> Thứ 2, 12:27 24/02/2020</td>
+                        </tr>
+                        <tr>
+                            <td>Ngày hết hạn</td>
+                            <td>Thứ 2, 12:27 25/03/2020</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="details-bottom-right">
+            <div class="right">
+                <div class="top_list">
+                    <h2>Danh mục cho thuê</h2>
+                    <ul>
+                        <li for="link-1"><a id="link-1" href="#">Cho thuê phòng trọ</a></li>
+                        <li for="link-2"><a id="link-2" href="#">Cho thuê nhà nguyên căn</a></li>
+                        <li for="link-3"><a id="link-3" href="#">Cho thuê căn hộ</a></li>
+                        <li for="link-4"><a id="link-4" href="#">>Cho thuê căn hộ mini</a></li>
+                        <li for="link-5"><a id="link-5" href="#">>Cho thuê căn hộ dịch vụ</a></li>
+                        <li for="link-6"><a id="link-6" href="#">Cho thuê mặt bằng</a></li>
+                        <li for="link-7"><a id="link-7" href="#">Tìm người ở ghép</a></li>
+                    </ul>
+                </div>
+                <div class="bottom_list">
+                    <h2>Tin mới đăng</h2>
+                    <div class="bottom">
+                        <div class="container-fluid px-4 py-5 mx-auto">
+                            <div class="row d-flex">
+                                <div class="card border-0 list_right_card">
+                                    <a href="#">
+                                        <div class="row set-p">
+                                            <div class="col-sm-4 px-0"> <img class="image"
+                                                    src="http://xaydungthuanphuoc.com/upload/Images/H%C3%8CNH%20C%E1%BB%A6A%20GIANG/ph%C3%B2ng%20tr%E1%BB%8D%20c%C3%B3%20g%C3%A1c/mau-phong-tro-co-gac-lung-dep%20(22).jpg">
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <!-- <div class="row px-3 mt-4 mb-3">
+                                                <p class="rating mb-0 px-2 mr-3"><strong>8.0</strong></p>
+                                                <p class="text-primary mb-0 mr-2 grade"><strong>Very Good</strong></p>
+                                                <p class="text-secondary mb-0 mr-2">&middot;</p>
+                                                <p class="text-secondary mb-0">14K review</p>
+                                            </div> -->
+                                                <div class="row px-3">
+                                                    <h3 class="font-weight-bold">Homestay Nguyễn Thị Thập<br>1.5
+                                                        Triệu/Người trọn gói</h3>
+                                                </div>
+                                                <div class="row px-3 mb-2 mt-2"> <span
+                                                        class="fa fa-star text-warning mr-1"></span> <span
+                                                        class="fa fa-star text-warning mr-1"></span> <span
+                                                        class="fa fa-star text-warning mr-1"></span> <span
+                                                        class="fa fa-star text-warning mr-1"></span> </div>
+                                                <div class="row px-3">
+                                                    <h5 class="mb-1 text-red">1.5 triệu/tháng</h5>
+                                                </div>
+                                                <div class="row px-3">
+                                                    <div class="row footer___2QdZm">
+                                                        <div><img class="image___3OzO2 " width="16"
+                                                                src="https://static.chotot.com/storage/chotot-icons/next/pro.svg"
+                                                                alt="Môigiới">
+                                                        </div>
+                                                        <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                        <div class="adItemPostedTime___2i72W">
+                                                            <span class="text___19FS4">22 phút trước</span>
+                                                        </div>
+                                                        <div class="deviderWrapper___3umBa">
+                                                        </div>
+                                                        <span class="adItemPostedTime___2i72W location___2mJlP"><span
+                                                                class="text___19FS4">Hồ Chí Minh</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid px-4 py-5 mx-auto">
+                        <div class="row d-flex">
+                            <div class="card border-0 list_right_card">
+                                <a href="#">
+                                    <div class="row set-p">
+                                        <div class="col-sm-4 px-0"> <img class="image"
+                                                src="https://xaynhatro.net/wp-content/uploads/2018/06/f70f05c965f280acd9e3.jpg">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <!-- <div class="row px-3 mt-4 mb-3">
+                                                <p class="rating mb-0 px-2 mr-3"><strong>8.0</strong></p>
+                                                <p class="text-primary mb-0 mr-2 grade"><strong>Very Good</strong></p>
+                                                <p class="text-secondary mb-0 mr-2">&middot;</p>
+                                                <p class="text-secondary mb-0">14K review</p>
+                                            </div> -->
+                                            <div class="row px-3">
+                                                <h3 class="font-weight-bold">Phòng trọ đẹp đủ nội thất Nguyễn Minh Khai
+                                                </h3>
+                                            </div>
+                                            <div class="row px-3 mb-2 mt-2"> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> </div>
+                                            <div class="row px-3">
+                                                <h5 class="mb-1 text-red">2 triệu/tháng</h5>
+                                            </div>
+                                            <div class="row px-3">
+                                                <div class="row footer___2QdZm">
+                                                    <div><img class="image___3OzO2 " width="16"
+                                                            src="https://static.chotot.com/storage/chotot-icons/next/pro.svg"
+                                                            alt="Môigiới">
+                                                    </div>
+                                                    <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                    <div class="adItemPostedTime___2i72W">
+                                                        <span class="text___19FS4">22 phút trước</span>
+                                                    </div>
+                                                    <div class="deviderWrapper___3umBa">
+                                                    </div>
+                                                    <span class="adItemPostedTime___2i72W location___2mJlP"><span
+                                                            class="text___19FS4">Đà Nẵng</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid px-4 py-5 mx-auto">
+                        <div class="row d-flex">
+                            <div class="card border-0 list_right_card">
+                                <a href="#">
+                                    <div class="row set-p">
+                                        <div class="col-sm-4 px-0"> <img class="image"
+                                                src="https://xaynhatro.net/wp-content/uploads/2018/05/kinh-nghiem-xay-phong-tro-dep.png">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <!-- <div class="row px-3 mt-4 mb-3">
+                                                <p class="rating mb-0 px-2 mr-3"><strong>8.0</strong></p>
+                                                <p class="text-primary mb-0 mr-2 grade"><strong>Very Good</strong></p>
+                                                <p class="text-secondary mb-0 mr-2">&middot;</p>
+                                                <p class="text-secondary mb-0">14K review</p>
+                                            </div> -->
+                                            <div class="row px-3">
+                                                <h3 class="font-weight-bold">Cho Thuê phòng trọ đường Nguyễn Huệ 25m²
+                                                </h3>
+                                            </div>
+                                            <div class="row px-3 mb-2 mt-2"> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> </div>
+                                            <div class="row px-3">
+                                                <h5 class="mb-1 text-red"> 900 nghìn/tháng</h5>
+                                            </div>
+                                            <div class="row px-3">
+                                                <div class="row footer___2QdZm">
+                                                    <div><img class="image___3OzO2 " width="16"
+                                                            src="https://static.chotot.com/storage/chotot-icons/next/pro.svg"
+                                                            alt="Môigiới">
+                                                    </div>
+                                                    <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                    <div class="adItemPostedTime___2i72W">
+                                                        <span class="text___19FS4">12 phút trước</span>
+                                                    </div>
+                                                    <div class="deviderWrapper___3umBa">
+                                                    </div>
+                                                    <span class="adItemPostedTime___2i72W location___2mJlP"><span
+                                                            class="text___19FS4">Thừa Thiên Huế</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid px-4 py-5 mx-auto">
+                        <div class="row d-flex">
+                            <div class="card border-0 list_right_card">
+                                <a href="#">
+                                    <div class="row set-p">
+                                        <div class="col-sm-4 px-0"> <img class="image"
+                                                src="https://news.meeycdn.com/uploads/2021/01/Nhung-luu-y-khi-xay-dung-phong-tro-dep-la-gi.jpg">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <!-- <div class="row px-3 mt-4 mb-3">
+                                                <p class="rating mb-0 px-2 mr-3"><strong>8.0</strong></p>
+                                                <p class="text-primary mb-0 mr-2 grade"><strong>Very Good</strong></p>
+                                                <p class="text-secondary mb-0 mr-2">&middot;</p>
+                                                <p class="text-secondary mb-0">14K review</p>
+                                            </div> -->
+                                            <div class="row px-3">
+                                                <h3 class="font-weight-bold">Cho Thuê phòng đường Hoàng Diệu<br>1.5
+                                                    Triệu/Người trọn gói</h3>
+                                            </div>
+                                            <div class="row px-3 mb-2 mt-2"> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> <span
+                                                    class="fa fa-star text-warning mr-1"></span> </div>
+                                            <div class="row px-3">
+                                                <h5 class="mb-1 text-red">1.5 triệu/tháng</h5>
+                                            </div>
+                                            <div class="row px-3">
+                                                <div class="row footer___2QdZm">
+                                                    <div><img class="image___3OzO2 " width="16"
+                                                            src="https://static.chotot.com/storage/chotot-icons/next/pro.svg"
+                                                            alt="Môigiới">
+                                                    </div>
+                                                    <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                    <div class="adItemPostedTime___2i72W">
+                                                        <span class="text___19FS4">22 phút trước</span>
+                                                    </div>
+                                                    <div class="deviderWrapper___3umBa">
+                                                    </div>
+                                                    <span class="adItemPostedTime___2i72W location___2mJlP"><span
+                                                            class="text___19FS4">Hồ Chí Minh</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="grid_12">
+                <h2>Bản Đồ</h2>
+                <div class="row px-3">
+                    <div class="row footer___2QdZm">
+                        <div><img class="image___3OzO2 " width="16" src="images/map.png" alt="map">
+                        </div>
+                        <a href="#">
+                            <div class="adItemPostedTime___2i72W">
+                                <span class="text___19FS4">Đường Văn Cao,Thành Phố Huế,Thừa Thiên Huế</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4668.09731723324!2d107.59952294165575!3d16.46814666803587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a117839a82b7%3A0xc1d08786cb8b1c57!2zVsSDbiBDYW8sIFh1w6JuIFBow7osIFRwLiBIdeG6vywgVGjhu6thIFRoacOqbiBIdeG6vywgVmlldG5hbQ!5e1!3m2!1sen!2sus!4v1628730828199!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- tin đăng tương tự -->
+        <div class="container-fluid ">
+            <h2><b>Tin Đăng Tương Tự</b></h2>
+                  <div class="row item-add">
+                        <div>
+                            <a href="#">
+                                <div class="card Similar" style="width:250px">
+                                    <img alt="Card image" class="card-img-top" src="https://thuenhatro360.com/u/i/YkGgFDNJ.png" style="width:100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Cần Cho thuê nhà giá rẻ tại đại học văn lang
+                                            </h5>
+                                            <figcaption class="figure-caption text-left">
+                                                40m²-2PN
+                                            </figcaption>
+                                            <p class="money text-left">
+                                                <b>
+                                                    6.5 triệu\tháng
+                                                </b>
+                                            </p>
+                                            <div class="row footer___2QdZm">
+                                                <div>
+                                                    <img alt="Môigiới" class="image___3OzO2 " src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" width="15"/>
+                                                </div>
+                                                <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                <div class="adItemPostedTime___2i72W">
+                                                    <span class="text___19FS4">
+                                                        22 phút trước
+                                                    </span>
+                                                </div>
+                                                <div class="deviderWrapper___3umBa">
+                                                </div>
+                                                <span class="adItemPostedTime___2i72W location___2mJlP">
+                                                    <span class="text___19FS4">
+                                                        Thừa Thiên Huế
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </img>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="card Similar" style="width:250px">
+                                    <img alt="Card image" class="card-img-top" src="https://tuyencongnhan.vn/files/Anh-TCN-Ni/Nam-2021/Thang-1/mau-thiet-ke-phong-tro-co-gac-lung-03.jpg" style="width:100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Phòng trọ đường Trường Chinh
+                                            </h5>
+                                            <figcaption class="figure-caption text-left">
+                                                40m²-2PN
+                                            </figcaption>
+                                            <p class="money text-left">
+                                                <b>
+                                                    1.5 triệu\tháng
+                                                </b>
+                                            </p>
+                                            <div class="row footer___2QdZm">
+                                                <div>
+                                                    <img alt="Môigiới" class="image___3OzO2 " src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" width="15"/>
+                                                </div>
+                                                <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                <div class="adItemPostedTime___2i72W">
+                                                    <span class="text___19FS4">
+                                                        2 ngày trước
+                                                    </span>
+                                                </div>
+                                                <div class="deviderWrapper___3umBa">
+                                                </div>
+                                                <span class="adItemPostedTime___2i72W location___2mJlP">
+                                                    <span class="text___19FS4">
+                                                        Hồ Chí Minh
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </img>
+                                </div>
+                            </a>
+                          </div>
+                          <div>
+                            <a href="#">
+                                <div class="card Similar" style="width:250px">
+                                    <img alt="Card image" class="card-img-top" src="http://xaydungthuanphuoc.com/upload/Images/H%C3%8CNH%20C%E1%BB%A6A%20GIANG/ph%C3%B2ng%20tr%E1%BB%8D%20c%C3%B3%20g%C3%A1c/mau-phong-tro-co-gac-lung-dep%20(22).jpg" style="width:100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                 Cho thuê phòng trọ giá rẻ đường Nguyễn Huệ
+                                            </h5>
+                                            <figcaption class="figure-caption text-left">
+                                                40m²-2PN
+                                            </figcaption>
+                                            <p class="money text-left">
+                                                <b>
+                                                    1.2 triệu\tháng
+                                                </b>
+                                            </p>
+                                            <div class="row footer___2QdZm">
+                                                <div>
+                                                    <img alt="Môigiới" class="image___3OzO2 " src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" width="15"/>
+                                                </div>
+                                                <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                <div class="adItemPostedTime___2i72W">
+                                                    <span class="text___19FS4">
+                                                        3 ngày trước
+                                                    </span>
+                                                </div>
+                                                <div class="deviderWrapper___3umBa">
+                                                </div>
+                                                <span class="adItemPostedTime___2i72W location___2mJlP">
+                                                    <span class="text___19FS4">
+                                                        Thừa Thiên Huế
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </img>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="card Similar" style="width:250px">
+                                    <img alt="Card image" class="card-img-top" src="http://nhadathalong.vn/FileUpload/Images/thumb/78511628_676991492829350_7653778201331630080_n.jpg" style="width:100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Phòng trọ giá sinh viên đường 2 bà trưng
+                                            </h5>
+                                            <figcaption class="figure-caption text-left">
+                                                20m²
+                                            </figcaption>
+                                            <p class="money text-left">
+                                                <b>
+                                                    1.2 triệu\tháng
+                                                </b>
+                                            </p>
+                                            <div class="row footer___2QdZm">
+                                                <div>
+                                                    <img alt="Môigiới" class="image___3OzO2 " src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" width="15"/>
+                                                </div>
+                                                <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                <div class="adItemPostedTime___2i72W">
+                                                    <span class="text___19FS4">
+                                                        22 phút trước
+                                                    </span>
+                                                </div>
+                                                <div class="deviderWrapper___3umBa">
+                                                </div>
+                                                <span class="adItemPostedTime___2i72W location___2mJlP">
+                                                    <span class="text___19FS4">
+                                                        Thừa Thiên Huế
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </img>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="card Similar" style="width:250px">
+                                    <img alt="Card image" class="card-img-top" src="http://img.nhadathanoiban.com//2016/06/07/20160607143215-df28.jpeg" style="width:100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Cần Cho thuê phòng gần trường Khoa học Huế
+                                            </h5>
+                                            <figcaption class="figure-caption text-left">
+                                                20m²
+                                            </figcaption>
+                                            <p class="money text-left">
+                                                <b>
+                                                    1 triệu\tháng
+                                                </b>
+                                            </p>
+                                            <div class="row footer___2QdZm">
+                                                <div>
+                                                    <img alt="Môigiới" class="image___3OzO2 " src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" width="15"/>
+                                                </div>
+                                                <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                <div class="adItemPostedTime___2i72W">
+                                                    <span class="text___19FS4">
+                                                        22 phút trước
+                                                    </span>
+                                                </div>
+                                                <div class="deviderWrapper___3umBa">
+                                                </div>
+                                                <span class="adItemPostedTime___2i72W location___2mJlP">
+                                                    <span class="text___19FS4">
+                                                        Thừa Thiên Huế
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </img>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="card Similar" style="width:250px">
+                                    <img alt="Card image" class="card-img-top" src="https://sbshouse.vn/wp-content/uploads/2020/05/thiet-ke-nha-tro-cho-thue-ket-hop-sieu-thi-6.jpg" style="width:100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Cho thuê nhà trọ đường Phan Bội Châu
+                                            </h5>
+                                            <figcaption class="figure-caption text-left">
+                                                25m²
+                                            </figcaption>
+                                            <p class="money text-left">
+                                                <b>
+                                                    1.5 triệu\tháng
+                                                </b>
+                                            </p>
+                                            <div class="row footer___2QdZm">
+                                                <div>
+                                                    <img alt="Môigiới" class="image___3OzO2 " src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" width="15"/>
+                                                </div>
+                                                <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                <div class="adItemPostedTime___2i72W">
+                                                    <span class="text___19FS4">
+                                                        22 phút trước
+                                                    </span>
+                                                </div>
+                                                <div class="deviderWrapper___3umBa">
+                                                </div>
+                                                <span class="adItemPostedTime___2i72W location___2mJlP">
+                                                    <span class="text___19FS4">
+                                                        Hà Nội
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </img>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="card Similar" style="width:250px">
+                                    <img alt="Card image" class="card-img-top" src="https://cdn.chotot.com/Ib_7uzXdI7oAVOluZvICVRKGE6YlAw82spqWR7nl_G4/preset:listing/plain/24ce131155464d5e4fa60c6fae104bee-2656959306454092703.jpg" style="width:100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Cần Cho thuê phòng trọ đường Ngô Quyền 
+                                            </h5>
+                                            <figcaption class="figure-caption text-left">
+                                               25m²
+                                            </figcaption>
+                                            <p class="money text-left">
+                                                <b>
+                                                    1.5 triệu\tháng
+                                                </b>
+                                            </p>
+                                            <div class="row footer___2QdZm">
+                                                <div>
+                                                    <img alt="Môigiới" class="image___3OzO2 " src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" width="15"/>
+                                                </div>
+                                                <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                <div class="adItemPostedTime___2i72W">
+                                                    <span class="text___19FS4">
+                                                        22 phút trước
+                                                    </span>
+                                                </div>
+                                                <div class="deviderWrapper___3umBa">
+                                                </div>
+                                                <span class="adItemPostedTime___2i72W location___2mJlP">
+                                                    <span class="text___19FS4">
+                                                        Thừa Thiên Huế
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </img>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="card Similar" style="width:250px">
+                                    <img alt="Card image" class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6NSYVnM9ZVgGNyh52qjLO4sg-VJfpinAM0b_rqltqrGe6KyHxqKUVigFAyEiPlZ5PZfk&usqp=CAU" style="width:100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Cần Cho thuê nhà giá rẻ đường Phan bội Châu
+                                            </h5>
+                                            <figcaption class="figure-caption text-left">
+                                                20m²
+                                            </figcaption>
+                                            <p class="money text-left">
+                                                <b>
+                                                    2.5 triệu\tháng
+                                                </b>
+                                            </p>
+                                            <div class="row footer___2QdZm">
+                                                <div>
+                                                    <img alt="Môigiới" class="image___3OzO2 " src="https://static.chotot.com/storage/chotot-icons/next/pro.svg" width="15"/>
+                                                </div>
+                                                <!-- <div class="deviderWrapper___3umBa"></div> -->
+                                                <div class="adItemPostedTime___2i72W">
+                                                    <span class="text___19FS4">
+                                                        22 phút trước
+                                                    </span>
+                                                </div>
+                                                <div class="deviderWrapper___3umBa">
+                                                </div>
+                                                <span class="adItemPostedTime___2i72W location___2mJlP">
+                                                    <span class="text___19FS4">
+                                                        Đà Nẵng
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </img>
+                                </div>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                  
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-left_title">
+                    <h1>
+                        TimPhong247
+                    </h1>
+                </div>
+                <div class="footer-left_main">
+                    <div>
+                        <h3>
+                            About
+                        </h3>
+                        <p>
+                            Đứng đầu các từ khóa liên quan đến phòng trọ
+                            <br>
+                            cho thuê, nhà cho thuê, tìm người ở ghép
+                            <br>
+                            70.000+ tin bài trên hệ thống, và tiếp tục tăng
+                            <br>
+                            300.000+ khách truy cập và hơn 2 triệu lượt
+                            <br>
+                            xem mỗi tháng
+                            </br>
+                            </br>
+                            </br>
+                            </br>
+                        </p>
+                    </div>
+                    <div class="pttt">
+                        <h3>
+                            Phương thức thanh toán
+                        </h3>
+                        <a href="#">
+                            <img height="80px" src="images/thanhtoan.png" width="145px" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="footer-right">
+                <div class="footer-right_head__1">
+                    <input id="search_footer" placeholder="  Your email" type="search" value="">
+                    <button id="button_next" type="button">
+                        Next
+                    </button>
+                    </input>
+                </div>
+                <div class="footer-main__right">
+                    <div class="footer-right_main_1">
+                        <h3>
+                            Liên hệ với chúng tôi
+                        </h3>
+                        <ul class="footer-right_img__list">
+                            <li>
+                                <a href="#">
+                                    <img alt="" src="facebook.png" />
+                                </a>
+                            </li>
+                            <li id="twitter-img">
+                                <a href="#">
+                                    <img alt="" src="twitter.png" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-right_main_2">
+                        <h3>
+                            Terms of Use
+                        </h3>
+                        <p>
+                            <a href="#">
+                                © Copyright 2019. Laaqiq All Right Reserved
+                            </a>
+                        </p>
+                        <br>
+                        <p>
+                            <a href="#">
+                                phongtro247@gmail.com
+                            </a>
+                        </p>
+                        </br>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>

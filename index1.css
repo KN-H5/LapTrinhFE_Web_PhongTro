@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Adobe Clean", serif;
+}
+body{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header1{
+    height: 60px;
+    background: white;
+    /* padding: ; */
+}
+.header1 .img{
+    float: left;
+    padding-left: 30px;
+    margin-top: 15px;
+    height: 40px;
+    /*width: 30%;*/
+    /*padding: 25px 10px*/
+}
+.header1 .search{
+    float: right;
+    /*margin_left:20px;*/
+    line-height: 60px;
+    width: 60%;
+    /*padding: 10px;*/
+}
+.header1 .search a{
+    color: #555;
+    text-decoration: none;
+    margin:10px;
+}
+.header1 .search a:hover{
+    color: black;
+}
+.header2{
+    background: #1473E6;
+    height: 40px;
+    clear: both;
+}
+.header2 a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    line-height: 40px;
+}
+.header2 a:hover{
+    color: black;
+}
+#search{
+    width: 230px;
+    height: 28px;
+    border-radius: 0.25rem ;
+    border: 1px solid;
+
+}
+button#tim_kiem.{
+    
+    width: 20px; 
+    height: 20px;
+    border-radius: 0.25rem ;
+    border: 1px solid; 
+    margin-top: 15px;
+    /* display: block; */
+}
+.fa {
+    display: block;
+    font:  28px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+   
+}
+.select_option{
+    border-radius: 5px;
+    background: #707070;
+    color: white;
+    width: 1180px;
+    margin-top: 5px;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+.select_option select{
+    width:125px;
+    height: 25px;
+}
+.select_option button{
+    background: #FFA80F;
+    border-radius: 6px;
+    width: 65px;
+    height: 25px;
+    color: white;
+}
+.select_option .list_select li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+.Slider h b{
+    font-size: 23px;
+    margin-left: 23px;
+}
+.Slider{
+    margin-top: 5px;
+}
+.bg-dark {
+    background-color: #a8b1ba!important;
+}
+/* xử lý menu */
+.dropdown{
+    position: relative;
+    display: inline-block;
+
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+.dropdown: hover .dropdown-content{
+    display: block;
+}
+.navbar-brand img{
+    background-size: 50%;
+    width: 150px;
+}
+a.nav-link.active{
+    margin-left: 200px;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+    
+}
